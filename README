@@ -11,3 +11,8 @@ POST request bodies of exactly 8192 bytes or less are not corrupted.
 HTTP/2 clients tested include nghttp2 1.16, Chrome 55 for Windows, and
 Firefox 51.0 for Windows. The client-side HTTP/2 over TLS traffic has been
 captured, decrypted, and verified to contain the uncorrupted POST request body.
+
+1. Build the docker image with `sudo docker build --tag repro /.`
+1. Run the image with `sudo docker run repro` to see the issue reproduced.
+
+A sample of the output produced by running the image is also included in the repository.
